@@ -4,6 +4,7 @@ import { DatabaseService } from './database/database.service';
 import { DatabaseModule } from './database/database.module';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
+import { PostModule } from './post/post.module';
 
 @Module({
   imports: [ConfigModule.forRoot(
@@ -11,7 +12,7 @@ import { UserModule } from './user/user.module';
       isGlobal: true,
       envFilePath: '.env',
     }
-  ), DatabaseModule, AuthModule, UserModule],
+  ), DatabaseModule, AuthModule, UserModule, PostModule],
   providers: [DatabaseService],
 })
 export class AppModule {}
